@@ -1,14 +1,27 @@
 import React, { useState } from "react";
 
+// -- Lines of Code 
+
 const ClickerOne = () => {
-  const [count, setCount] = useState(0);
-  return (
-    <div>
-      <p>{count}</p>
-      <button onClick={() => setCount(count + 1)}>Increment</button>
-      <button onClick={() => setCount(count - 1)}>Decrement</button>
-    </div>
-  );
+    const [countLoC, setCount] = useState(0);
+    //   const mainCount = count;
+    if (countLoC >= 10) {
+        console.log("OVER 10")
+    }
+    return (
+        <div>
+
+            <div>
+                <p>You have written {countLoC} lines of code</p>
+                <button onClick={
+                    () => setCount(countLoC + 1)
+                }>Write Line of Code</button>
+
+            </div>
+
+        </div>
+
+    );
 };
 
 export default ClickerOne;

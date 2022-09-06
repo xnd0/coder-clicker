@@ -28,30 +28,22 @@ export default function MainPage() {
   return (
     <div>
         CLICKER CODER CLICKER CODER CLICKER
-      {/* We are passing the currentPage from state and the function to update it */}
-      {/* <NavTabs currentPage={currentPage} handlePageChange={handlePageChange} /> */}
-      {/* Here we are calling the renderPage method which will return a component  */}
-      {/* {renderPage()}
-      {Footer()} */}
        <div className="App">
-      <header className="App-header">
-        {/* <img src={logo} className="App-logo" alt="logo" /> */}
-
+      <section className="App-body">
 
         <div>
-        ClickerOne
+        {/* Write a Line of Code */}
         {ClickerOne()}
         </div>
 
 
-
-        {/* <button id="btn1">Write a line of code</button> */}
         <p>
           Welcome to Coder Clicker
         </p>
+        <p> Goal: How many lines of code can you write?</p>
 
 
-      </header>
+      </section>
     </div>
     </div>
   );
