@@ -4,9 +4,10 @@ import React from 'react';
 
 function CardBody(props) {
   return (
-    <div className="App-block">
-<p className="card-text">TOtal Lines of Code: {props.count}</p>
+    <div>
+<p className="card-text">Total Lines of Code: {props.total}</p>
 {/* Lines of Code - LoC  */}
+<div className='App-block'>
     <div className="card-body App-card">
       <p className="card-text">Lines of Code: {props.count}</p>
       <button
@@ -42,6 +43,7 @@ function CardBody(props) {
       >
         Decrement
       </button>
+    </div>
     </div>
 
 
