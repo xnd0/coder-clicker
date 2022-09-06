@@ -4,14 +4,17 @@ import React from 'react';
 
 function CardBody(props) {
   return (
-    <div className="card-body">
-      <p className="card-text">Click Count: {props.count}</p>
+    <div className="App-block">
+<p className="card-text">TOtal Lines of Code: {props.count}</p>
+{/* Lines of Code - LoC  */}
+    <div className="card-body App-card">
+      <p className="card-text">Lines of Code: {props.count}</p>
       <button
         type="button"
         className="btn btn-primary"
         onClick={props.handleIncrement}
       >
-        Increment
+        Write Line of Code
       </button>{' '}
       <button
         type="button"
@@ -20,6 +23,28 @@ function CardBody(props) {
       >
         Decrement
       </button>
+    </div>
+
+{/* functions  */}
+    <div className="card-body App-card">
+    <p className="card-text">Functions: {props.countF}</p>
+      <button
+        type="button"
+        className="btn btn-primary"
+        onClick={props.handleIncrementF}
+      >
+        Write Function
+      </button>{' '}
+      <button
+        type="button"
+        className="btn btn-danger"
+        onClick={props.handleDecrementF}
+      >
+        Decrement
+      </button>
+    </div>
+
+
     </div>
   );
 }
