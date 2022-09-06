@@ -1,6 +1,8 @@
-import React, { useState } from 'react';
-// import NavTabs from './NavTabs';
+// import React, { useState } from 'react';
+import React from 'react';
+import ClickerOne from './ClickerOne';
 
+// import NavTabs from './NavTabs';
 // import Footer from './Footer';
 
 
@@ -25,7 +27,7 @@ export default function MainPage() {
 
   return (
     <div>
-        CLICKER
+        CLICKER CODER CLICKER CODER CLICKER
       {/* We are passing the currentPage from state and the function to update it */}
       {/* <NavTabs currentPage={currentPage} handlePageChange={handlePageChange} /> */}
       {/* Here we are calling the renderPage method which will return a component  */}
@@ -34,17 +36,19 @@ export default function MainPage() {
        <div className="App">
       <header className="App-header">
         {/* <img src={logo} className="App-logo" alt="logo" /> */}
-        <button id="btn1">Write a line of code</button>
 
 
         <div>
-        
+        ClickerOne
+        {ClickerOne()}
         </div>
 
+
+
+        {/* <button id="btn1">Write a line of code</button> */}
         <p>
           Welcome to Coder Clicker
         </p>
-
 
 
       </header>
