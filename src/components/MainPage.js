@@ -1,6 +1,7 @@
 // import React, { useState } from 'react';
 import React from 'react';
 import ClickerOne from './ClickerOne';
+import Counter from "./Counter";
 
 // import NavTabs from './NavTabs';
 // import Footer from './Footer';
@@ -27,6 +28,7 @@ export default function MainPage() {
 
     return (
         <div>
+            {/* <Counter /> */}
             CLICKER CODER CLICKER CODER CLICKER
             <div className="App">
                 <section className="App-body">
