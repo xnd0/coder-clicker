@@ -36,7 +36,7 @@
 }
 
 .App-block {
-  background-color: #282c34;
+  background-color: #2b3c5d;
   min-height: 60vh;
   display: flex;
   flex-direction: row;
@@ -55,7 +55,9 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
-  margin: 2px;
+  padding: 1.6vh;
+  margin: 1.6vh;
+  border-radius: 1.6%;
 }
 
 .App-link {
