@@ -1,6 +1,15 @@
 import React, { useState } from 'react';
 import CardBody from './CardBody';
 
+
+var iter = 0;
+function autoCounter() {
+    console.log('show at ' + (iter++));
+    setTimeout(autoCounter, 1000);
+}
+
+autoCounter();
+
 export default function Counter() {
   // Here we set the state for count and also create a function to update it.
   // Set the initial value to -
@@ -8,6 +17,13 @@ export default function Counter() {
   const [count, setCount] = useState(0);
   const [countF, setCountF] = useState(0);
   const [countAI, setCountAI] = useState(0);
+
+
+  const autoIncrement = () => {
+  setInterval(function() {
+    setTotal(total + 100);
+  },1000);
+}
 
   // Helper function to handle when the user clicks increment
   const handleIncrement = () => {
@@ -23,6 +39,8 @@ export default function Counter() {
   const handleIncrementAI = () => {
     setCountAI(countAI + 1);
     // setTotal(total + 10);
+    autoIncrement();
+
   };
 
   // Helper function to handle when the user clicks to "functions"
