@@ -7,6 +7,7 @@ export default function Counter() {
   const [total, setTotal] = useState(0);
   const [count, setCount] = useState(0);
   const [countF, setCountF] = useState(0);
+  const [countAI, setCountAI] = useState(0);
 
   // Helper function to handle when the user clicks increment
   const handleIncrement = () => {
@@ -17,6 +18,11 @@ export default function Counter() {
   const handleIncrementF = () => {
     setCountF(countF + 1);
     setTotal(total + 10);
+  };
+
+  const handleIncrementAI = () => {
+    setCountAI(countAI + 1);
+    // setTotal(total + 10);
   };
 
   // Helper function to handle when the user clicks to "functions"
@@ -32,9 +38,11 @@ export default function Counter() {
         total={total}
         count={count}
         countF={countF}
+        countAI={countAI}
         handleIncrement={handleIncrement}
         handleDecrement={handleDecrement}
         handleIncrementF={handleIncrementF}
+        handleIncrementAI={handleIncrementAI}
       />
     </div>
   );
