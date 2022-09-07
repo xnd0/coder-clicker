@@ -1,14 +1,11 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import CardBody from './CardBody';
 
 
-var iter = 0;
-function autoCounter() {
-    console.log('show at ' + (iter++));
-    setTimeout(autoCounter, 1000);
-}
 
-autoCounter();
+
+
+
 
 export default function Counter() {
   // Here we set the state for count and also create a function to update it.
@@ -19,11 +16,45 @@ export default function Counter() {
   const [countAI, setCountAI] = useState(0);
 
 
-  const autoIncrement = () => {
-  setInterval(function() {
-    setTotal(total + 100);
-  },1000);
-}
+  useEffect(() => {
+    const interval = setInterval(() => {
+      console.log('This will be called every 1 seconds');
+      handleIncrement();
+
+    }, 1000);
+  
+    return () => clearInterval(interval);
+  }, [count]);
+
+
+  // const [value, setValue] = useState(0);
+  // var master = useRef(total);
+  // const increment = () => {
+  //   // master = total;
+  //   master.current = React.memo(setInterval(() => setTotal(total + 5), 1000));
+  // };
+
+  // increment();
+
+//   const autoIncrement = () => {
+//     // total.preventDefault();
+//   setInterval(function() {
+//     // total.preventDefault();
+//     setTotal(total + 100);
+//   },1000);
+// }
+
+// autoIncrement();
+// var iter = 0;
+// function autoCounter() {
+//     console.log('show at ' + (iter++));
+//     setTotal(total + 100);
+//     setTimeout(autoCounter, 1000);
+// }
+
+
+
+// autoCounter();
 
   // Helper function to handle when the user clicks increment
   const handleIncrement = () => {
@@ -39,7 +70,18 @@ export default function Counter() {
   const handleIncrementAI = () => {
     setCountAI(countAI + 1);
     // setTotal(total + 10);
-    autoIncrement();
+    // autoIncrement();
+    // autoCounter();
+    if (countAI > 2) {
+      setInterval(function() {
+      for (let i = 0; i < 10000; i++) {
+          // i.preventDefault();
+          setCountAI(countAI + 33);
+          
+        // const element = array[i];
+      }
+    },1000);
+    }
 
   };
 
