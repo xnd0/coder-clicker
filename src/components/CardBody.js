@@ -37,9 +37,10 @@ function CardBody(props) {
         <p className="card-text">Total Lines of Code: {props.total}  </p>
 
 
+
 {/* linear progress bar  */}
         <div className='l-bar'>
-            <ProgressBar completed={((props.total) * 0.01)} maxCompleted={100}/>
+            <ProgressBar completed={((props.total) * 0.01)} maxCompleted={100} bgColor="#61dafb"/>
           </div>
 
 
