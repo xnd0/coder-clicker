@@ -27,7 +27,7 @@ export default function MainPage() {
                     <p>
                         Welcome to Coder Clicker
                     </p>
-                    <p> Goal: How many lines of code can you write?</p>
+                    <p> Goal: Get to 200 - How many lines of code can you write?</p>
                 </div>
             </div>
         </div>

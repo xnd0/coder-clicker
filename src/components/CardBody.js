@@ -63,6 +63,8 @@ function CardBody(props) {
           </button>
         </div>
 
+
+
         {/* functions  */}
      
      <div style={{ display: props.count >= 10 ? "flex" : "none" }}>
@@ -95,8 +97,8 @@ function CardBody(props) {
 
 
 
-
         {/* AI Bots  */}
+        <div style={{ display: props.countF >= 10 ? "flex" : "none" }}>
         <div className="card-body App-card">
 
           <div>
@@ -112,15 +114,16 @@ function CardBody(props) {
             className="btn btn-primary"
             onClick={props.handleIncrementAI}
           >
-            Create Auto Bot
+            Activate Auto Bot
           </button>{' '}
           <button
             type="button"
             className="btn btn-danger"
             onClick={props.handleDecrementAI}
           >
-            Decrement
+            Deactivate
           </button>
+        </div>
         </div>
 
 

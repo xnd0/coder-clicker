@@ -17,7 +17,11 @@ export default function Counter() {
   const [counterAI, setCounterAI] = useState(0);
 
 
-  console.log(counterAI, "...counterAI is")
+  // console.log(counterAI, "...counterAI is")
+  if (total >= 200) {
+    alert("200+ lines of code. Thanks for the working Program! \n Starting you Over. ")
+    setTotal(total - 199)
+  }
 
 
   useEffect(() => {
@@ -37,7 +41,7 @@ export default function Counter() {
       // handleIncrement();
 
       // setTotal(total + 1);
-    }, 1000);
+    }, 500);
 
 
     return () => clearInterval(interval);
@@ -98,6 +102,7 @@ export default function Counter() {
         handleDecrement={handleDecrement}
         handleIncrementF={handleIncrementF}
         handleIncrementAI={handleIncrementAI}
+        handleDecrementAI={handleDecrementAI}
       />
     </div>
   );
