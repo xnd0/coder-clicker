@@ -14,17 +14,35 @@ export default function Counter() {
   const [count, setCount] = useState(0);
   const [countF, setCountF] = useState(0);
   const [countAI, setCountAI] = useState(0);
+  const [counterAI, setCounterAI] = useState(0);
+
+
+  console.log(counterAI, "...counterAI is")
 
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      console.log('This will be called every 1 seconds');
-      handleIncrement();
 
+    if (countAI < 3) {
+      return;
+    } else {
+
+    const interval = setInterval(() => {
+      // let counterAI = countAI
+
+      setTotal(total + 1);
+      setCounterAI(counterAI + 1);
+      console.log(counterAI, 'This will be called every 1 second');
+      // console.log(total)
+
+      // handleIncrement();
+
+      // setTotal(total + 1);
     }, 1000);
-  
+
+
     return () => clearInterval(interval);
-  }, [count]);
+  }}, [counterAI]);
+
 
 
   // const [value, setValue] = useState(0);
@@ -36,25 +54,25 @@ export default function Counter() {
 
   // increment();
 
-//   const autoIncrement = () => {
-//     // total.preventDefault();
-//   setInterval(function() {
-//     // total.preventDefault();
-//     setTotal(total + 100);
-//   },1000);
-// }
+  //   const autoIncrement = () => {
+  //     // total.preventDefault();
+  //   setInterval(function() {
+  //     // total.preventDefault();
+  //     setTotal(total + 100);
+  //   },1000);
+  // }
 
-// autoIncrement();
-// var iter = 0;
-// function autoCounter() {
-//     console.log('show at ' + (iter++));
-//     setTotal(total + 100);
-//     setTimeout(autoCounter, 1000);
-// }
+  // autoIncrement();
+  // var iter = 0;
+  // function autoCounter() {
+  //     console.log('show at ' + (iter++));
+  //     setTotal(total + 100);
+  //     setTimeout(autoCounter, 1000);
+  // }
 
 
 
-// autoCounter();
+  // autoCounter();
 
   // Helper function to handle when the user clicks increment
   const handleIncrement = () => {
@@ -69,19 +87,21 @@ export default function Counter() {
 
   const handleIncrementAI = () => {
     setCountAI(countAI + 1);
+    console.log(counterAI, 'in function')
+    setCounterAI(counterAI + 1)
     // setTotal(total + 10);
     // autoIncrement();
     // autoCounter();
-    if (countAI > 2) {
-      setInterval(function() {
-      for (let i = 0; i < 10000; i++) {
-          // i.preventDefault();
-          setCountAI(countAI + 33);
-          
-        // const element = array[i];
-      }
-    },1000);
-    }
+    // if (countAI > 2) {
+    //   setInterval(function() {
+    //   for (let i = 0; i < 10000; i++) {
+    //       // i.preventDefault();
+    //       setCountAI(countAI + 33);
+
+    //     // const element = array[i];
+    //   }
+    // },1000);
+    // }
 
   };
 
