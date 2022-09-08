@@ -64,7 +64,9 @@ function CardBody(props) {
         </div>
 
         {/* functions  */}
-        <div className="card-body App-card">
+     
+     <div style={{ display: props.count >= 10 ? "flex" : "none" }}>
+        <div className="card-body App-card hidden-function">
 
           <div>
             {/* Progress Bar (circle) */}
@@ -89,6 +91,9 @@ function CardBody(props) {
             Decrement
           </button>
         </div>
+        </div>
+
+
 
 
         {/* AI Bots  */}

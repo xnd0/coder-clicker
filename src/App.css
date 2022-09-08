@@ -71,6 +71,10 @@
   justify-content: center;
 }
 
+/* .hidden-function {
+  display: none;
+} */
+
 
 @keyframes App-logo-spin {
   from {

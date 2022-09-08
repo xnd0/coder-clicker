@@ -48,9 +48,16 @@ export default function Counter() {
   const handleIncrement = () => {
     setCount(count + 1);
     setTotal(total + 1);
+
+    if (count > 10) {
+      console.log('got 10!')
+      
+    }
+
   };
 
   const handleIncrementF = () => {
+    
     setCountF(countF + 1);
     setTotal(total + 10);
   };
@@ -69,10 +76,19 @@ export default function Counter() {
     setCount(count - 1);
   };
 
+  const handleDecrementAI = () => {
+    setCountAI(countAI - 1);
+  };
+
+  // if (count > 10) {
+  //   console.log('got 10!')
+
+  // }
+
   return (
     <div className="App-card text-center">
       <div className="card-header bg-primary text-white">Coder Clicker!</div>
-      {/* Here we pass two props to CardBody which happen to be the event handlers we created above */}
+      {/* Here we pass props to CardBody which happen to be the event handlers we created above */}
       <CardBody
         total={total}
         count={count}
