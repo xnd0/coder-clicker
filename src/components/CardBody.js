@@ -30,7 +30,7 @@ function CardBody(props) {
       <div className="center">
         {/* Progress Bar LoC (circle) */}
         <div style={{ width: 100, height: 100 }}>
-          <CircularProgressbar value={(props.total) * 0.5} />
+          <CircularProgressbar value={(props.total) * 0.01} />
         </div>
       </div>
 

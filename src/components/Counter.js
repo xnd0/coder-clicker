@@ -18,10 +18,10 @@ export default function Counter() {
 
 
   // console.log(counterAI, "...counterAI is")
-  if (total >= 200) {
-    alert("200+ lines of code. Thanks for the working Program! \n Starting you Over. ")
-    setTotal(total - 199)
-  }
+  // if (total >= 200) {
+  //   alert("200+ lines of code. Thanks for the working Program! \n Starting you Over. ")
+  //   setTotal(total - 199)
+  // }
 
 
   useEffect(() => {
@@ -35,13 +35,10 @@ export default function Counter() {
 
       setTotal(total + 1);
       setCounterAI(counterAI + 1);
-      console.log(counterAI, 'This will be called every 1 second');
-      // console.log(total)
+      console.log(counterAI, 'This is Called');
 
-      // handleIncrement();
-
-      // setTotal(total + 1);
-    }, 500);
+      // 4 ms
+    }, 4);
 
 
     return () => clearInterval(interval);
