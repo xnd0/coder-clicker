@@ -24,7 +24,17 @@ const percentage = 66;
 function CardBody(props) {
   return (
     <div>
-      <p className="card-text">Total Lines of Code: {props.total}</p>
+      <div className='center'>
+      <p className="card-text">Total Lines of Code: {props.total}  </p>
+
+      <div className="center">
+        {/* Progress Bar LoC (circle) */}
+        <div style={{ width: 100, height: 100 }}>
+          <CircularProgressbar value={(props.total) * 0.5} />
+        </div>
+      </div>
+
+      </div>
       {/* Lines of Code - LoC  */}
       <div className='App-block'>
         <div className="card-body App-card">
@@ -56,7 +66,7 @@ function CardBody(props) {
         {/* functions  */}
         <div className="card-body App-card">
 
-        <div>
+          <div>
             {/* Progress Bar (circle) */}
             <div style={{ width: 100, height: 100 }}>
               <CircularProgressbar value={(props.countF) * 10} />
@@ -81,32 +91,32 @@ function CardBody(props) {
         </div>
 
 
-                {/* AI Bots  */}
-                <div className="card-body App-card">
+        {/* AI Bots  */}
+        <div className="card-body App-card">
 
-<div>
-    {/* Progress Bar (circle) */}
-    <div style={{ width: 100, height: 100 }}>
-      <CircularProgressbar value={(props.countAI) * 50} />
-    </div>
-  </div>
+          <div>
+            {/* Progress Bar (circle) */}
+            <div style={{ width: 100, height: 100 }}>
+              <CircularProgressbar value={(props.countAI) * 50} />
+            </div>
+          </div>
 
-  <p className="card-text">AI Bots: {props.countAI}</p>
-  <button
-    type="button"
-    className="btn btn-primary"
-    onClick={props.handleIncrementAI}
-  >
-    Create AI 
-  </button>{' '}
-  <button
-    type="button"
-    className="btn btn-danger"
-    onClick={props.handleDecrementAI}
-  >
-    Decrement
-  </button>
-</div>
+          <p className="card-text">AI Bots: {props.countAI}</p>
+          <button
+            type="button"
+            className="btn btn-primary"
+            onClick={props.handleIncrementAI}
+          >
+            Create AI
+          </button>{' '}
+          <button
+            type="button"
+            className="btn btn-danger"
+            onClick={props.handleDecrementAI}
+          >
+            Decrement
+          </button>
+        </div>
 
 
 
