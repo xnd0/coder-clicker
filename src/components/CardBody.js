@@ -168,6 +168,41 @@ function CardBody(props) {
         </div>
 
 
+       {/* AI UPGRADER  */}
+       <div style={{ display: props.countAI >= 1 ? "flex" : "none" }}>
+          <div className="card-body App-card">
+
+            <div>
+              {/* Progress Bar (circle) */}
+              {/* <div style={{ width: 100, height: 100 }}>
+                <CircularProgressbar value={(props.countAI) * 100} />
+              </div> */}
+            </div>
+
+            <p className="card-text">AutoBot Upgrader: {props.countAI}</p>
+            <button
+              type="button"
+              className="btn btn-primary"
+              onClick={props.handleIncrementAI}
+            >
+              Activate Auto Bot
+            </button>{' '}
+            <button
+              type="button"
+              className="btn btn-danger"
+              onClick={props.handleDecrementAI}
+            >
+              Deactivate
+            </button>
+            <button
+              type="button"
+              className="btn btn-danger"
+              onClick={props.handleFasterAI}
+            >
+              FASTER
+            </button>
+          </div>
+        </div>
 
 
       </div>
