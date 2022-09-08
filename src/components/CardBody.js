@@ -29,8 +29,8 @@ function CardBody(props) {
 
         <div className="center">
           {/* Progress Bar LoC (circle) */}
-          <div style={{ width: 100, height: 100 }}>
-            <CircularProgressbar value={(props.total) * 0.01} />
+          <div style={{ width: 70, height: 70 }}>
+            <CircularProgressbar value={(props.total) * 0.001} />
           </div>
 
 
@@ -137,6 +137,13 @@ function CardBody(props) {
               onClick={props.handleDecrementAI}
             >
               Deactivate
+            </button>
+            <button
+              type="button"
+              className="btn btn-danger"
+              onClick={props.handleFasterAI}
+            >
+              FASTER
             </button>
           </div>
         </div>

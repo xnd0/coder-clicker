@@ -15,6 +15,7 @@ export default function Counter() {
   const [countF, setCountF] = useState(0);
   const [countAI, setCountAI] = useState(0);
   const [counterAI, setCounterAI] = useState(0);
+  const [fasterAI, setFasterAI] = useState(0);
 
 
   // console.log(counterAI, "...counterAI is")
@@ -22,6 +23,9 @@ export default function Counter() {
   //   alert("200+ lines of code. Thanks for the working Program! \n Starting you Over. ")
   //   setTotal(total - 199)
   // }
+
+let y = (1000/count);
+
 
 
   useEffect(() => {
@@ -32,14 +36,15 @@ export default function Counter() {
 
     const interval = setInterval(() => {
       // let counterAI = countAI
+      let x = 20
+      setTotal(total + x);
 
-      setTotal(total + 1);
       setCounterAI(counterAI + 1);
       console.log(counterAI, 'This is Called');
 
       // 4 ms
-    }, 4);
-
+      // let y = 4
+    }, y);
 
     return () => clearInterval(interval);
   }}, [counterAI]);
@@ -81,6 +86,11 @@ export default function Counter() {
     setCountAI(countAI - 1);
   };
 
+  const handleFasterAI = () => {
+    (y = y / 2);
+    
+  };
+
   // if (count > 10) {
   //   console.log('got 10!')
 
@@ -100,6 +110,7 @@ export default function Counter() {
         handleIncrementF={handleIncrementF}
         handleIncrementAI={handleIncrementAI}
         handleDecrementAI={handleDecrementAI}
+        handleFasterAI={handleFasterAI}
       />
     </div>
   );

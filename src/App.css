@@ -37,7 +37,7 @@
 
 .App-block {
   background-color: #2b3c5d;
-  min-height: 60vh;
+  min-height: 42vh;
   display: flex;
   flex-direction: row;
   align-items: center;
