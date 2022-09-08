@@ -22,7 +22,7 @@ export default function Counter() {
 
   useEffect(() => {
 
-    if (countAI < 3) {
+    if (countAI < 1) {
       return;
     } else {
 
@@ -86,6 +86,9 @@ export default function Counter() {
   };
 
   const handleIncrementAI = () => {
+    if (countAI > 0) {
+      return;
+    }
     setCountAI(countAI + 1);
     console.log(counterAI, 'in function')
     setCounterAI(counterAI + 1)

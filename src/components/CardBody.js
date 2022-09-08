@@ -97,17 +97,17 @@ function CardBody(props) {
           <div>
             {/* Progress Bar (circle) */}
             <div style={{ width: 100, height: 100 }}>
-              <CircularProgressbar value={(props.countAI) * 50} />
+              <CircularProgressbar value={(props.countAI) * 100} />
             </div>
           </div>
 
-          <p className="card-text">AI Bots: {props.countAI}</p>
+          <p className="card-text">Auto Bot: {props.countAI}</p>
           <button
             type="button"
             className="btn btn-primary"
             onClick={props.handleIncrementAI}
           >
-            Create AI
+            Create Auto Bot
           </button>{' '}
           <button
             type="button"
