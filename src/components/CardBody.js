@@ -1,5 +1,14 @@
 import React from 'react';
 
+import ProgressBar from "@ramonak/react-progress-bar";
+// import '@ramonak/react-progress-bar/dist/styles.css'
+
+// const Example = () => {
+//   return <ProgressBar completed={60} />;
+// };
+
+
+
 // import { CircularProgressbar } from "react-circular-progressbar";
 
 // const MyComponent: React.FC = () => {
@@ -27,11 +36,20 @@ function CardBody(props) {
       <div className='center'>
         <p className="card-text">Total Lines of Code: {props.total}  </p>
 
+
+{/* linear progress bar  */}
+        <div className='l-bar'>
+            <ProgressBar completed={((props.total) * 0.01)} maxCompleted={100}/>
+          </div>
+
+
+
         <div className="center">
           {/* Progress Bar LoC (circle) */}
-          <div style={{ width: 70, height: 70 }}>
+          {/* <div style={{ width: 70, height: 70 }}>
             <CircularProgressbar value={(props.total) * 0.001} />
-          </div>
+          </div> */}
+
 
 
           {/* -- Progression Messages --  */}
