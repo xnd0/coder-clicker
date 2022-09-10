@@ -184,6 +184,7 @@ function CardBody(props) {
             </div>
 
             <p className="card-text">AutoBot Upgrader: {props.countAI}</p>
+            <p className="card-text">Speed Upgrades: {props.countSpeed}</p>
             <button
               type="button"
               className="btn btn-primary"

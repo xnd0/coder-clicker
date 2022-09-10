@@ -16,6 +16,7 @@ export default function Counter() {
   const [countAI, setCountAI] = useState(0);
   const [counterAI, setCounterAI] = useState(0);
   const [fasterAI, setFasterAI] = useState(0);
+  const [countSpeed, setCountSpeed] = useState(1);
 
 
   // console.log(counterAI, "...counterAI is")
@@ -24,7 +25,7 @@ export default function Counter() {
   //   setTotal(total - 199)
   // }
 
-let y = (1000/count);
+let y = (1000/countSpeed);
 
 
 
@@ -87,7 +88,8 @@ let y = (1000/count);
   };
 
   const handleFasterAI = () => {
-    (y = y / 2);
+    setCountSpeed(countSpeed + 1);
+    // (y = y / 2);
     
   };
 
@@ -105,6 +107,7 @@ let y = (1000/count);
         count={count}
         countF={countF}
         countAI={countAI}
+        countSpeed={countSpeed}
         handleIncrement={handleIncrement}
         handleDecrement={handleDecrement}
         handleIncrementF={handleIncrementF}
