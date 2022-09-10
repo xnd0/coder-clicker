@@ -64,6 +64,16 @@
   color: #61dafb;
 }
 
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
 .center {
   display: flex;
   flex-direction: column;
@@ -72,7 +82,7 @@
 }
 
 .l-bar {
-    width: 80vw;
+    width: 60%;
 }
 
 /* .hidden-function {

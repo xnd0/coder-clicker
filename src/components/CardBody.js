@@ -38,10 +38,10 @@ function CardBody(props) {
 
 
 
-{/* linear progress bar  */}
+        {/* linear progress bar  */}
         <div className='l-bar'>
-            <ProgressBar completed={((props.total) * 0.01)} maxCompleted={100} bgColor="#61dafb"/>
-          </div>
+          <ProgressBar completed={((props.total) * 0.01)} maxCompleted={100} bgColor="#61dafb" />
+        </div>
 
 
 
@@ -68,108 +68,112 @@ function CardBody(props) {
 
         </div>
 
-      </div>
-      {/* Lines of Code - LoC  */}
-      <div className='App-block'>
-        <div className="card-body App-card">
-
-          <div>
-            {/* Progress Bar LoC (circle) */}
-            <div style={{ width: 100, height: 100 }}>
-              <CircularProgressbar value={(props.count) * 5} />
-            </div>
-          </div>
-
-          <p className="card-text">Lines of Code: {props.count}</p>
-          <button
-            type="button"
-            className="btn btn-primary"
-            onClick={props.handleIncrement}
-          >
-            Write Line of Code
-          </button>{' '}
-          <button
-            type="button"
-            className="btn btn-danger"
-            onClick={props.handleDecrement}
-          >
-            Decrement
-          </button>
+        {/* row  */}
+        <div>
         </div>
-
-
-
-        {/* functions  */}
-
-        <div style={{ display: props.count >= 10 ? "flex" : "none" }}>
-          <div className="card-body App-card hidden-function">
+        {/* Lines of Code - LoC  */}
+        <div className='App-block'>
+          <div className="card-body App-card">
 
             <div>
-              {/* Progress Bar (circle) */}
+              {/* Progress Bar LoC (circle) */}
               <div style={{ width: 100, height: 100 }}>
-                <CircularProgressbar value={(props.countF) * 10} />
+                <CircularProgressbar value={(props.count) * 5} />
               </div>
             </div>
 
-            <p className="card-text">Functions: {props.countF}</p>
+            <p className="card-text">Lines of Code: {props.count}</p>
             <button
               type="button"
               className="btn btn-primary"
-              onClick={props.handleIncrementF}
+              onClick={props.handleIncrement}
             >
-              Write Function
+              Write Line of Code
             </button>{' '}
             <button
               type="button"
               className="btn btn-danger"
-              onClick={props.handleDecrementF}
+              onClick={props.handleDecrement}
             >
               Decrement
             </button>
           </div>
-        </div>
 
 
 
-        {/* AI Bots  */}
-        <div style={{ display: props.countF >= 10 ? "flex" : "none" }}>
-          <div className="card-body App-card">
+          {/* functions  */}
+          <div style={{ display: props.count >= 10 ? "flex" : "none" }}>
+            <div className="card-body App-card hidden-function">
 
-            <div>
-              {/* Progress Bar (circle) */}
-              <div style={{ width: 100, height: 100 }}>
-                <CircularProgressbar value={(props.countAI) * 100} />
+              <div>
+                {/* Progress Bar (circle) */}
+                <div style={{ width: 100, height: 100 }}>
+                  <CircularProgressbar value={(props.countF) * 10} />
+                </div>
               </div>
+
+              <p className="card-text">Functions: {props.countF}</p>
+              <button
+                type="button"
+                className="btn btn-primary"
+                onClick={props.handleIncrementF}
+              >
+                Write Function
+              </button>{' '}
+              <button
+                type="button"
+                className="btn btn-danger"
+                onClick={props.handleDecrementF}
+              >
+                Decrement
+              </button>
             </div>
-
-            <p className="card-text">Auto Bot: {props.countAI}</p>
-            <button
-              type="button"
-              className="btn btn-primary"
-              onClick={props.handleIncrementAI}
-            >
-              Activate Auto Bot
-            </button>{' '}
-            <button
-              type="button"
-              className="btn btn-danger"
-              onClick={props.handleDecrementAI}
-            >
-              Deactivate
-            </button>
-            <button
-              type="button"
-              className="btn btn-danger"
-              onClick={props.handleFasterAI}
-            >
-              FASTER
-            </button>
           </div>
+
+
+
+          {/* AI Bots  */}
+          <div style={{ display: props.countF >= 10 ? "flex" : "none" }}>
+            <div className="card-body App-card">
+
+              <div>
+                {/* Progress Bar (circle) */}
+                <div style={{ width: 100, height: 100 }}>
+                  <CircularProgressbar value={(props.countAI) * 100} />
+                </div>
+              </div>
+
+              <p className="card-text">Auto Bot: {props.countAI}</p>
+              <button
+                type="button"
+                className="btn btn-primary"
+                onClick={props.handleIncrementAI}
+              >
+                Activate Auto Bot
+              </button>{' '}
+              <button
+                type="button"
+                className="btn btn-danger"
+                onClick={props.handleDecrementAI}
+              >
+                Deactivate
+              </button>
+              <button
+                type="button"
+                className="btn btn-danger"
+                onClick={props.handleFasterAI}
+              >
+                FASTER
+              </button>
+            </div>
+          </div>
+
         </div>
+        {/* end row  */}
 
 
-       {/* AI UPGRADER  */}
-       <div style={{ display: props.countAI >= 1 ? "flex" : "none" }}>
+        {/* AI UPGRADER  */}
+        <div style={{ display: props.countAI >= 1 ? "flex" : "none" }}>
           <div className="card-body App-card">
 
             <div>
