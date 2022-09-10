@@ -89,8 +89,10 @@ let y = (1000/countSpeed);
 
   const handleFasterAI = () => {
     setCountSpeed(countSpeed + 1);
-    // (y = y / 2);
-    
+  };
+
+  const handleSlowerAI = () => {
+    setCountSpeed(countSpeed - 1);
   };
 
   // if (count > 10) {
@@ -114,6 +116,7 @@ let y = (1000/countSpeed);
         handleIncrementAI={handleIncrementAI}
         handleDecrementAI={handleDecrementAI}
         handleFasterAI={handleFasterAI}
+        handleSlowerAI={handleSlowerAI}
       />
     </div>
   );

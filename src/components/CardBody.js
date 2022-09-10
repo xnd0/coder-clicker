@@ -70,6 +70,51 @@ function CardBody(props) {
 
         {/* row  */}
         <div>
+                  {/* AI UPGRADER  */}
+        <div style={{ display: props.countAI >= 1 ? "flex" : "none" }}>
+          <div className="card-body App-card">
+
+            <div>
+              {/* Progress Bar (circle) */}
+              {/* <div style={{ width: 100, height: 100 }}>
+                <CircularProgressbar value={(props.countAI) * 100} />
+              </div> */}
+            </div>
+
+            <p className="card-text">AutoBot Upgrader: {props.countAI}</p>
+            <p className="card-text">Speed Upgrades: {props.countSpeed}</p>
+
+            <button
+              type="button"
+              className="btn btn-danger"
+              onClick={props.handleFasterAI}
+            >
+              FASTER
+            </button>
+            <button
+              type="button"
+              className="btn btn-danger"
+              onClick={props.handleSlowerAI}
+            >
+              SLOWER
+            </button>
+            <button
+              type="button"
+              className="btn btn-primary"
+              onClick={props.handleIncrementAI}
+            >
+              Activate Auto Bot
+            </button>{' '}
+            <button
+              type="button"
+              className="btn btn-danger"
+              onClick={props.handleDecrementAI}
+            >
+              Deactivate
+            </button>
+
+          </div>
+        </div>
         </div>
         {/* Lines of Code - LoC  */}
         <div className='App-block'>
@@ -172,42 +217,7 @@ function CardBody(props) {
         {/* end row  */}
 
 
-        {/* AI UPGRADER  */}
-        <div style={{ display: props.countAI >= 1 ? "flex" : "none" }}>
-          <div className="card-body App-card">
 
-            <div>
-              {/* Progress Bar (circle) */}
-              {/* <div style={{ width: 100, height: 100 }}>
-                <CircularProgressbar value={(props.countAI) * 100} />
-              </div> */}
-            </div>
-
-            <p className="card-text">AutoBot Upgrader: {props.countAI}</p>
-            <p className="card-text">Speed Upgrades: {props.countSpeed}</p>
-            <button
-              type="button"
-              className="btn btn-primary"
-              onClick={props.handleIncrementAI}
-            >
-              Activate Auto Bot
-            </button>{' '}
-            <button
-              type="button"
-              className="btn btn-danger"
-              onClick={props.handleDecrementAI}
-            >
-              Deactivate
-            </button>
-            <button
-              type="button"
-              className="btn btn-danger"
-              onClick={props.handleFasterAI}
-            >
-              FASTER
-            </button>
-          </div>
-        </div>
 
 
       </div>
