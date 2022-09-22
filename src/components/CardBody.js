@@ -35,13 +35,14 @@ function CardBody(props) {
     <div>
       <div className='center'>
         <p className="card-text">Total Lines of Code: {props.total}  </p>
+        <p className="card-text">Aprox Number of Functions: ({props.total / 10}) </p>
 
 
 
         {/* linear progress bar  */}
-        <div className='l-bar'>
+        {/* <div className='l-bar'>
           <ProgressBar completed={((props.total) * 0.01)} maxCompleted={100} bgColor="#61dafb" />
-        </div>
+        </div> */}
 
 
 

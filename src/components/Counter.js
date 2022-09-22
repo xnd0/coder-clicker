@@ -88,7 +88,7 @@ let y = (1000/countSpeed);
   };
 
   const handleFasterAI = () => {
-    setCountSpeed(countSpeed + 1);
+    setCountSpeed(countSpeed + 10000);
   };
 
   const handleSlowerAI = () => {
