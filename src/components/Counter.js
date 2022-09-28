@@ -2,11 +2,6 @@ import React, { useState, useEffect } from 'react';
 import CardBody from './CardBody';
 
 
-
-
-
-
-
 export default function Counter() {
   // Here we set the state for count and also create a function to update it.
   // Set the initial value to -
@@ -28,7 +23,6 @@ export default function Counter() {
 let y = (1000/countSpeed);
 
 
-
   useEffect(() => {
 
     if (countAI < 1) {
@@ -37,7 +31,7 @@ let y = (1000/countSpeed);
 
     const interval = setInterval(() => {
       // let counterAI = countAI
-      let x = 20
+      let x = 11
       setTotal(total + x);
 
       setCounterAI(counterAI + 1);
@@ -58,9 +52,7 @@ let y = (1000/countSpeed);
 
     if (count > 10) {
       console.log('got 10!')
-      
     }
-
   };
 
   const handleIncrementF = () => {
@@ -88,7 +80,7 @@ let y = (1000/countSpeed);
   };
 
   const handleFasterAI = () => {
-    setCountSpeed(countSpeed + 10000);
+    setCountSpeed(countSpeed + 1);
   };
 
   const handleSlowerAI = () => {
@@ -97,7 +89,6 @@ let y = (1000/countSpeed);
 
   // if (count > 10) {
   //   console.log('got 10!')
-
   // }
 
   return (

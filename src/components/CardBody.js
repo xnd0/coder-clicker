@@ -81,7 +81,7 @@ function CardBody(props) {
               </div> */}
             </div>
 
-            <p className="card-text">AutoBot Upgrader: {props.countAI}</p>
+            <p className="card-text">Active AutoBot Algorithms: {props.countAI}</p>
             <p className="card-text">Speed Upgrades: {props.countSpeed}</p>
 
             <button
@@ -98,13 +98,13 @@ function CardBody(props) {
             >
               SLOWER
             </button>
-            <button
+            {/* <button
               type="button"
               className="btn btn-primary"
               onClick={props.handleIncrementAI}
             >
               Activate Auto Bot
-            </button>{' '}
+            </button>{' '} */}
             <button
               type="button"
               className="btn btn-danger"
@@ -133,7 +133,7 @@ function CardBody(props) {
               className="btn btn-primary"
               onClick={props.handleIncrement}
             >
-              Write Line of Code
+              Hand Write Line of Code
             </button>{' '}
             <button
               type="button"
@@ -188,7 +188,7 @@ function CardBody(props) {
                 </div>
               </div>
 
-              <p className="card-text">Auto Bot: {props.countAI}</p>
+              <p className="card-text">Auto Bot Algorithm: {props.countAI}</p>
               <button
                 type="button"
                 className="btn btn-primary"
@@ -203,13 +203,13 @@ function CardBody(props) {
               >
                 Deactivate
               </button>
-              <button
+              {/* <button
                 type="button"
                 className="btn btn-danger"
                 onClick={props.handleFasterAI}
               >
                 FASTER
-              </button>
+              </button> */}
             </div>
           </div>
 
