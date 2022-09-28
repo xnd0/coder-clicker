@@ -35,14 +35,13 @@ function CardBody(props) {
     <div>
       <div className='center'>
         <p className="card-text">Total Lines of Code: {props.total}  </p>
-        <p className="card-text">Aprox Number of Functions: ({props.total / 10}) </p>
 
 
 
         {/* linear progress bar  */}
-        {/* <div className='l-bar'>
+        <div className='l-bar'>
           <ProgressBar completed={((props.total) * 0.01)} maxCompleted={100} bgColor="#61dafb" />
-        </div> */}
+        </div>
 
 
 
@@ -124,7 +123,7 @@ function CardBody(props) {
             <div>
               {/* Progress Bar LoC (circle) */}
               <div style={{ width: 100, height: 100 }}>
-                <CircularProgressbar value={(props.count) * 5} />
+                <CircularProgressbar value={(props.count) * 10} />
               </div>
             </div>
 
@@ -220,7 +219,7 @@ function CardBody(props) {
 
 
 
-
+        <p className="card-text">Aprox Number of Functions: ({props.total / 10}) </p>
       </div>
     </div>
   );
