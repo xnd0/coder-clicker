@@ -1,7 +1,28 @@
 import React from 'react';
 
+// -- Old version of CardBody.js 10/15/22 -- //
+
 import ProgressBar from "@ramonak/react-progress-bar";
 // import '@ramonak/react-progress-bar/dist/styles.css'
+
+// const Example = () => {
+//   return <ProgressBar completed={60} />;
+// };
+
+
+
+// import { CircularProgressbar } from "react-circular-progressbar";
+
+// const MyComponent: React.FC = () => {
+// const points = 30000 //only of testing
+//  const percentage = (points / 10000) * 100; //calculate the percentage
+//  return (
+//         <div>
+//             <CircularProgressbar value={percentage} text={points} />
+//         </div>
+//     );
+// }
+// export default MyComponent;
 
 import { CircularProgressbar } from 'react-circular-progressbar';
 import 'react-circular-progressbar/dist/styles.css';
@@ -17,12 +38,22 @@ function CardBody(props) {
       <div className='center'>
         <p className="card-text">Total Lines of Code: {props.total}  </p>
 
+
+
         {/* linear progress bar  */}
-        {/* <div className='l-bar'>
+        <div className='l-bar'>
           <ProgressBar completed={((props.total) * 0.01)} maxCompleted={100} bgColor="#61dafb" />
-        </div> */}
+        </div>
+
+
 
         <div className="center">
+          {/* Progress Bar LoC (circle) */}
+          {/* <div style={{ width: 70, height: 70 }}>
+            <CircularProgressbar value={(props.total) * 0.001} />
+          </div> */}
+
+
 
           {/* -- Progression Messages --  */}
           <div style={{ display: props.total >= 1000 ? "flex" : "none" }}>
@@ -45,6 +76,13 @@ function CardBody(props) {
         <div style={{ display: props.countAI >= 1 ? "flex" : "none" }}>
           <div className="card-body App-card">
 
+            <div>
+              {/* Progress Bar (circle) */}
+              {/* <div style={{ width: 100, height: 100 }}>
+                <CircularProgressbar value={(props.countAI) * 100} />
+              </div> */}
+            </div>
+
             <p className="card-text">Active AutoBot Algorithms: {props.countAI}</p>
             <p className="card-text">Speed Upgrades: {props.countSpeed}</p>
 
@@ -62,7 +100,13 @@ function CardBody(props) {
             >
               SLOWER
             </button>
-
+            {/* <button
+              type="button"
+              className="btn btn-primary"
+              onClick={props.handleIncrementAI}
+            >
+              Activate Auto Bot
+            </button>{' '} */}
             <button
               type="button"
               className="btn btn-danger"
@@ -161,14 +205,23 @@ function CardBody(props) {
               >
                 Deactivate
               </button>
-
+              {/* <button
+                type="button"
+                className="btn btn-danger"
+                onClick={props.handleFasterAI}
+              >
+                FASTER
+              </button> */}
             </div>
           </div>
 
         </div>
         {/* end row  */}
 
-        {/* <p className="card-text">Aprox Number of Functions: ({props.total / 10}) </p> */}
+
+
+
+        <p className="card-text">Aprox Number of Functions: ({props.total / 10}) </p>
       </div>
     </div>
   );

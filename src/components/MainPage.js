@@ -1,6 +1,6 @@
 // import React, { useState } from 'react';
 import React from 'react';
-import ClickerOne from './ClickerOne';
+// import ClickerOne from './old/ClickerOne';
 import Counter from "./Counter";
 
 
@@ -11,11 +11,6 @@ export default function MainPage() {
             {/* <Counter /> */}
             <div className="App">
                 <section className="App-body">
-                    
-
-                    {/* <div className="App-block">
-                        {ClickerOne()}
-                    </div> */}
 
                     <div className="App-block">
                         <Counter />
