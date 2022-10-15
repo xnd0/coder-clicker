@@ -18,7 +18,7 @@ function CardBody(props) {
           <ProgressBar completed={((props.total) * 0.01)} maxCompleted={100} bgColor="#61dafb" />
         </div> */}
 
-        <div className="center">
+        <div className="center flex-column">
 
           {/* -- Progression Messages --  */}
           <div style={{ display: props.total >= 1000 ? "flex" : "none" }}>
@@ -36,7 +36,7 @@ function CardBody(props) {
         </div>
 
         {/* row  */}
-        <div>
+        <div className='flex-columnm'>
           {/* AI UPGRADER  */}
           <div style={{ display: props.countAI >= 1 ? "flex" : "none" }}>
             <div className="card-body App-card">
@@ -70,29 +70,32 @@ function CardBody(props) {
             </div>
           </div>
         </div>
-        {/* Lines of Code - LoC  */}
-        <div className='App-block'>
-          <div className="card-body App-card flex-row">
 
-            <div className='left'>
-              {/* CIRCLE Progress Bar LoC (circle) */}
-              <div style={{ width: 50, height: 50 }}>
-                <CircularProgressbar value={(props.count) * 10} />
+
+        <div className='flex-column'>
+
+          {/* -- 1st Lines of Code Card - LoC -- */}
+          <div className='App-block'>
+            <div className="card-body App-card flex-row">
+
+              <div className='left'>
+                {/* 1st CIRCLE Progress Bar LoC (circle) */}
+                <div style={{ width: 50, height: 50 }}>
+                  <CircularProgressbar value={(props.count) * 10} />
+                </div>
               </div>
-            </div>
 
+              <br></br>
 
-            <br></br>
-
-            <div>
-            <button
-              type="button"
-              className="btn btn-primary"
-              onClick={props.handleIncrement}
-            >
-              "Hand Write" Line of Code
-            </button>{' '}
-            {/* <button
+              <div>
+                <button
+                  type="button"
+                  className="btn btn-primary"
+                  onClick={props.handleIncrement}
+                >
+                  "Hand Write" Line of Code
+                </button>{' '}
+                {/* <button
               type="button"
               className="btn btn-danger"
               onClick={props.handleDecrement}
@@ -100,81 +103,84 @@ function CardBody(props) {
               Decrement
             </button> */}
 
-            {/* -- display count --  */}
-            <p className="card-text">Lines of Code: {props.count}</p>
+                {/* -- display count --  */}
+                <p className="card-text">Lines of Code: {props.count}</p>
 
-            </div>
-
-          </div>
-
-
-
-          {/* functions  */}
-          <div style={{ display: props.count >= 10 ? "flex" : "none" }}>
-            <div className="card-body App-card hidden-function">
-
-              <div>
-                {/* Progress Bar (circle) */}
-                <div style={{ width: 100, height: 100 }}>
-                  <CircularProgressbar value={(props.countF) * 10} />
-                </div>
               </div>
 
-              <p className="card-text">Functions: {props.countF}</p>
-              <button
-                type="button"
-                className="btn btn-primary"
-                onClick={props.handleIncrementF}
-              >
-                Write Function
-              </button>{' '}
-              <button
-                type="button"
-                className="btn btn-danger"
-                onClick={props.handleDecrementF}
-              >
-                Decrement
-              </button>
             </div>
-          </div>
 
 
 
-          {/* AI Bots  */}
-          <div style={{ display: props.countF >= 10 ? "flex" : "none" }}>
-            <div className="card-body App-card">
+            {/* functions  */}
+            <div style={{ display: props.count >= 10 ? "flex" : "none" }}>
+              <div className="card-body App-card flex-row hidden-function">
 
-              <div>
-                {/* Progress Bar (circle) */}
-                <div style={{ width: 100, height: 100 }}>
-                  <CircularProgressbar value={(props.countAI) * 100} />
+                <div>
+                  {/* Progress Bar (circle) */}
+                  <div style={{ width: 50, height: 50 }}>
+                    <CircularProgressbar value={(props.countF) * 10} />
+                  </div>
                 </div>
+
+                <p className="card-text">Functions: {props.countF}</p>
+                <button
+                  type="button"
+                  className="btn btn-primary"
+                  onClick={props.handleIncrementF}
+                >
+                  Write Function
+                </button>{' '}
+                <button
+                  type="button"
+                  className="btn btn-danger"
+                  onClick={props.handleDecrementF}
+                >
+                  Decrement
+                </button>
               </div>
-
-              <p className="card-text">Auto Bot Algorithm: {props.countAI}</p>
-              <button
-                type="button"
-                className="btn btn-primary"
-                onClick={props.handleIncrementAI}
-              >
-                Activate Auto Bot
-              </button>{' '}
-              <button
-                type="button"
-                className="btn btn-danger"
-                onClick={props.handleDecrementAI}
-              >
-                Deactivate
-              </button>
-
             </div>
-          </div>
 
+
+
+            {/* AI Bots  */}
+            <div style={{ display: props.countF >= 10 ? "flex" : "none" }}>
+              <div className="card-body App-card flex-row">
+
+                <div>
+                  {/* Progress Bar (circle) */}
+                  <div style={{ width: 50, height: 50 }}>
+                    <CircularProgressbar value={(props.countAI) * 100} />
+                  </div>
+                </div>
+
+                <p className="card-text">Auto Bot Algorithm: {props.countAI}</p>
+                <button
+                  type="button"
+                  className="btn btn-primary"
+                  onClick={props.handleIncrementAI}
+                >
+                  Activate Auto Bot
+                </button>{' '}
+                <button
+                  type="button"
+                  className="btn btn-danger"
+                  onClick={props.handleDecrementAI}
+                >
+                  Deactivate
+                </button>
+
+              </div>
+            </div>
+
+          </div>
+          {/* end row  */}
+
+          {/* <p className="card-text">Aprox Number of Functions: ({props.total / 10}) </p> */}
         </div>
-        {/* end row  */}
 
-        {/* <p className="card-text">Aprox Number of Functions: ({props.total / 10}) </p> */}
       </div>
+
     </div>
   );
 }
