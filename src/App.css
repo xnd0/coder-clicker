@@ -85,6 +85,17 @@
     width: 60%;
 }
 
+.header {
+  background-color: black;
+  color:#61dafb
+
+}
+
+.footer {
+  background-color: black;
+  color:#61dafb
+}
+
 /* .hidden-function {
   display: none;
 } */

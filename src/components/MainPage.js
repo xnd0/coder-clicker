@@ -9,7 +9,6 @@ export default function MainPage() {
     return (
         <div>
             {/* <Counter /> */}
-            CLICKER CODER CLICKER CODER CLICKER
             <div className="App">
                 <section className="App-body">
                     
@@ -24,10 +23,7 @@ export default function MainPage() {
 
                 </section>
                 <div>
-                    <p>
-                        Welcome to Coder Clicker
-                    </p>
-                    <p> Goal: Get to 10k - How many lines of code can you write?</p>
+                    <p> Goal: Write 10,000 lines of code - (click the buttons)</p>
                 </div>
             </div>
         </div>
