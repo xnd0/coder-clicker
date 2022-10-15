@@ -10,32 +10,10 @@ import 'react-circular-progressbar/dist/styles.css';
 function CardBody(props) {
   return (
     <div>
-      <div className='center'>
-        <p className="card-text">Total Lines of Code: {props.total}  </p>
+      <div className='flex-row'>
 
-        {/* linear progress bar  */}
-        {/* <div className='l-bar'>
-          <ProgressBar completed={((props.total) * 0.01)} maxCompleted={100} bgColor="#61dafb" />
-        </div> */}
 
-        <div className="center flex-column">
 
-          {/* -- Progression Messages --  */}
-          <div style={{ display: props.total >= 1000 ? "flex" : "none" }}>
-            <p style={{ display: props.total >= 5000 ? "none" : "flex" }}> Wow! 1,000 lines of code </p>
-          </div>
-
-          <div style={{ display: props.total >= 5000 ? "flex" : "none" }}>
-            <p style={{ display: props.total >= 10000 ? "none" : "flex" }}> 5,000!? Half way there </p>
-          </div>
-
-          <div style={{ display: props.total >= 10000 ? "flex" : "none" }}>
-            <p> 10,000+ lines of code. </p>
-          </div>
-
-        </div>
-
-        {/* row  */}
         <div className='flex-columnm'>
           {/* AI UPGRADER  */}
           <div style={{ display: props.countAI >= 1 ? "flex" : "none" }}>
@@ -78,7 +56,7 @@ function CardBody(props) {
           <div className='App-block'>
             <div className="card-body App-card flex-row">
 
-              <div className='left'>
+              <div>
                 {/* 1st CIRCLE Progress Bar LoC (circle) */}
                 <div style={{ width: 50, height: 50 }}>
                   <CircularProgressbar value={(props.count) * 10} />
@@ -96,23 +74,21 @@ function CardBody(props) {
                   "Hand Write" Line of Code
                 </button>{' '}
                 {/* <button
-              type="button"
-              className="btn btn-danger"
-              onClick={props.handleDecrement}
-            >
-              Decrement
-            </button> */}
+                type="button"
+                 className="btn btn-danger"
+                onClick={props.handleDecrement}
+                >
+                Decrement
+                </button> */}
 
                 {/* -- display count --  */}
-                <p className="card-text">Lines of Code: {props.count}</p>
-
+                <p className="card-text">Lines of Code (+1): {props.count}</p>
               </div>
-
             </div>
 
 
 
-            {/* functions  */}
+            {/* -- 2nd Card - Functions -- */}
             <div style={{ display: props.count >= 10 ? "flex" : "none" }}>
               <div className="card-body App-card flex-row hidden-function">
 
@@ -123,27 +99,33 @@ function CardBody(props) {
                   </div>
                 </div>
 
-                <p className="card-text">Functions: {props.countF}</p>
+                <br></br>
+
+                <div>
+
                 <button
                   type="button"
                   className="btn btn-primary"
                   onClick={props.handleIncrementF}
                 >
-                  Write Function
+                  "Hand Write" Function
                 </button>{' '}
-                <button
+                <p className="card-text">Functions (+10): {props.countF}</p>
+                {/* <button
                   type="button"
                   className="btn btn-danger"
                   onClick={props.handleDecrementF}
                 >
                   Decrement
-                </button>
+                </button> */}
+
+</div>
               </div>
             </div>
 
 
 
-            {/* AI Bots  */}
+            {/* 3rd Card - AI Auto Bot  */}
             <div style={{ display: props.countF >= 10 ? "flex" : "none" }}>
               <div className="card-body App-card flex-row">
 
@@ -154,33 +136,62 @@ function CardBody(props) {
                   </div>
                 </div>
 
-                <p className="card-text">Auto Bot Algorithm: {props.countAI}</p>
+                <br></br>
+
+<div>
                 <button
                   type="button"
                   className="btn btn-primary"
                   onClick={props.handleIncrementAI}
                 >
-                  Activate Auto Bot
+                  Initialize Auto Bot
                 </button>{' '}
-                <button
+                <p className="card-text">Auto Bot Algorithm: {props.countAI}</p>
+                {/* <button
                   type="button"
                   className="btn btn-danger"
                   onClick={props.handleDecrementAI}
                 >
                   Deactivate
-                </button>
-
+                </button> */}
               </div>
             </div>
-
+            </div>
           </div>
-          {/* end row  */}
-
           {/* <p className="card-text">Aprox Number of Functions: ({props.total / 10}) </p> */}
         </div>
 
-      </div>
 
+
+        {/* -v-v-v- ScoreCard Info Area -v-v-v- */}
+        <div className='center'>
+          <p className="card-text">Total Lines of Code: {props.total}  </p>
+
+          {/* linear progress bar  */}
+          {/* <div className='l-bar'>
+          <ProgressBar completed={((props.total) * 0.01)} maxCompleted={100} bgColor="#61dafb" />
+          </div> */}
+
+          <div className="center flex-column">
+
+            {/* -- Progression Messages --  */}
+            <div style={{ display: props.total >= 1000 ? "flex" : "none" }}>
+              <p style={{ display: props.total >= 5000 ? "none" : "flex" }}> Wow! 1,000+ lines of code </p>
+            </div>
+
+            <div style={{ display: props.total >= 5000 ? "flex" : "none" }}>
+              <p style={{ display: props.total >= 10000 ? "none" : "flex" }}> 5,000!? Half way there </p>
+            </div>
+
+            <div style={{ display: props.total >= 10000 ? "flex" : "none" }}>
+              <p> 10,000+ lines of code. </p>
+            </div>
+
+          </div>
+        </div>
+        {/* -^-^-^- End ScoreCard Info Area -^-^-^- */}
+
+      </div>
     </div>
   );
 }

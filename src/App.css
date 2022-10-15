@@ -1,3 +1,13 @@
+
+
+button {
+  margin: 2px 4px;
+}
+
+p {
+  margin: 2px 6px;
+}
+
 .App {
   text-align: center;
 }
