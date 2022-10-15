@@ -13,43 +13,7 @@ function CardBody(props) {
       <div className='flex-row'>
 
 
-
-        <div className='flex-columnm'>
-          {/* AI UPGRADER  */}
-          <div style={{ display: props.countAI >= 1 ? "flex" : "none" }}>
-            <div className="card-body App-card">
-
-              <p className="card-text">Active AutoBot Algorithms: {props.countAI}</p>
-              <p className="card-text">Speed Upgrades: {props.countSpeed}</p>
-
-              <button
-                type="button"
-                className="btn btn-danger"
-                onClick={props.handleFasterAI}
-              >
-                FASTER
-              </button>
-              <button
-                type="button"
-                className="btn btn-danger"
-                onClick={props.handleSlowerAI}
-              >
-                SLOWER
-              </button>
-
-              <button
-                type="button"
-                className="btn btn-danger"
-                onClick={props.handleDecrementAI}
-              >
-                Deactivate
-              </button>
-
-            </div>
-          </div>
-        </div>
-
-
+        {/* -v-v-v- Initial Clicker Button Cards -v-v-v- //  */}
         <div className='flex-column'>
 
           {/* -- 1st Lines of Code Card - LoC -- */}
@@ -103,15 +67,15 @@ function CardBody(props) {
 
                 <div>
 
-                <button
-                  type="button"
-                  className="btn btn-primary"
-                  onClick={props.handleIncrementF}
-                >
-                  "Hand Write" Function
-                </button>{' '}
-                <p className="card-text">Functions (+10): {props.countF}</p>
-                {/* <button
+                  <button
+                    type="button"
+                    className="btn btn-primary"
+                    onClick={props.handleIncrementF}
+                  >
+                    "Hand Write" Function
+                  </button>{' '}
+                  <p className="card-text">Functions (+10): {props.countF}</p>
+                  {/* <button
                   type="button"
                   className="btn btn-danger"
                   onClick={props.handleDecrementF}
@@ -119,7 +83,7 @@ function CardBody(props) {
                   Decrement
                 </button> */}
 
-</div>
+                </div>
               </div>
             </div>
 
@@ -138,34 +102,77 @@ function CardBody(props) {
 
                 <br></br>
 
-<div>
-                <button
-                  type="button"
-                  className="btn btn-primary"
-                  onClick={props.handleIncrementAI}
-                >
-                  Initialize Auto Bot
-                </button>{' '}
-                <p className="card-text">Auto Bot Algorithm: {props.countAI}</p>
-                {/* <button
+                <div>
+                  <button
+                    type="button"
+                    className="btn btn-primary"
+                    onClick={props.handleIncrementAI}
+                  >
+                    Initialize Auto Bot
+                  </button>{' '}
+                  <p className="card-text">Auto Bot Algorithm: {props.countAI}</p>
+                  {/* <button
                   type="button"
                   className="btn btn-danger"
                   onClick={props.handleDecrementAI}
                 >
                   Deactivate
                 </button> */}
+                </div>
               </div>
-            </div>
             </div>
           </div>
           {/* <p className="card-text">Aprox Number of Functions: ({props.total / 10}) </p> */}
         </div>
 
+        {/* -^-^-^- End Initial Clicker Button Cards -^-^-^- //  */}
+
+
+
+        {/* -v-v-v- AutoBot Algorithm UPGRADER section -v-v-v- */}
+        <div className='flex-column App-block'>
+
+          <div style={{ display: props.countAI >= 1 ? "flex" : "none" }}>
+            <div className="card-body App-card">
+
+              <p className="card-text">Active AutoBot Algorithms: {props.countAI}</p>
+              <p className="card-text">Speed Upgrades: {props.countSpeed}</p>
+
+<br></br>
+              <button
+                type="button"
+                className="btn btn-danger"
+                onClick={props.handleFasterAI}
+              >
+                FASTER
+              </button>
+              <button
+                type="button"
+                className="btn btn-danger"
+                onClick={props.handleSlowerAI}
+              >
+                SLOWER
+              </button>
+<br></br>
+              <button
+                type="button"
+                className="btn btn-danger"
+                onClick={props.handleDecrementAI}
+              >
+                Deactivate
+              </button>
+
+            </div>
+          </div>
+        </div>
+        {/* -^-^-^- End AutoBot Algorithm UPGRADER section -^-^-^- */}
+
 
 
         {/* -v-v-v- ScoreCard Info Area -v-v-v- */}
-        <div className='center'>
+        <div className='center App-block'>
           <p className="card-text">Total Lines of Code: {props.total}  </p>
+          <br></br>
 
           {/* linear progress bar  */}
           {/* <div className='l-bar'>
@@ -184,7 +191,10 @@ function CardBody(props) {
             </div>
 
             <div style={{ display: props.total >= 10000 ? "flex" : "none" }}>
+              <div className='flex-column'>
               <p> 10,000+ lines of code. </p>
+              <p> Slow Down! </p>
+              </div>
             </div>
 
           </div>
