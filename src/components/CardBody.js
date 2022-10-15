@@ -6,10 +6,6 @@ import ProgressBar from "@ramonak/react-progress-bar";
 import { CircularProgressbar } from 'react-circular-progressbar';
 import 'react-circular-progressbar/dist/styles.css';
 
-const percentage = 66;
-
-<CircularProgressbar value={percentage} text={`${percentage}%`} />;
-// We can see that by logging `props` that what are being passed to this child component is an object containing `count`, `handleIncrement()`, and `handleDecrement()`.
 
 function CardBody(props) {
   return (
@@ -41,65 +37,74 @@ function CardBody(props) {
 
         {/* row  */}
         <div>
-                  {/* AI UPGRADER  */}
-        <div style={{ display: props.countAI >= 1 ? "flex" : "none" }}>
-          <div className="card-body App-card">
+          {/* AI UPGRADER  */}
+          <div style={{ display: props.countAI >= 1 ? "flex" : "none" }}>
+            <div className="card-body App-card">
 
-            <p className="card-text">Active AutoBot Algorithms: {props.countAI}</p>
-            <p className="card-text">Speed Upgrades: {props.countSpeed}</p>
+              <p className="card-text">Active AutoBot Algorithms: {props.countAI}</p>
+              <p className="card-text">Speed Upgrades: {props.countSpeed}</p>
 
-            <button
-              type="button"
-              className="btn btn-danger"
-              onClick={props.handleFasterAI}
-            >
-              FASTER
-            </button>
-            <button
-              type="button"
-              className="btn btn-danger"
-              onClick={props.handleSlowerAI}
-            >
-              SLOWER
-            </button>
+              <button
+                type="button"
+                className="btn btn-danger"
+                onClick={props.handleFasterAI}
+              >
+                FASTER
+              </button>
+              <button
+                type="button"
+                className="btn btn-danger"
+                onClick={props.handleSlowerAI}
+              >
+                SLOWER
+              </button>
 
-            <button
-              type="button"
-              className="btn btn-danger"
-              onClick={props.handleDecrementAI}
-            >
-              Deactivate
-            </button>
+              <button
+                type="button"
+                className="btn btn-danger"
+                onClick={props.handleDecrementAI}
+              >
+                Deactivate
+              </button>
 
+            </div>
           </div>
-        </div>
         </div>
         {/* Lines of Code - LoC  */}
         <div className='App-block'>
-          <div className="card-body App-card">
+          <div className="card-body App-card flex-row">
 
-            <div>
-              {/* Progress Bar LoC (circle) */}
-              <div style={{ width: 100, height: 100 }}>
+            <div className='left'>
+              {/* CIRCLE Progress Bar LoC (circle) */}
+              <div style={{ width: 50, height: 50 }}>
                 <CircularProgressbar value={(props.count) * 10} />
               </div>
             </div>
 
-            <p className="card-text">Lines of Code: {props.count}</p>
+
+            <br></br>
+
+            <div>
             <button
               type="button"
               className="btn btn-primary"
               onClick={props.handleIncrement}
             >
-              Hand Write Line of Code
+              "Hand Write" Line of Code
             </button>{' '}
-            <button
+            {/* <button
               type="button"
               className="btn btn-danger"
               onClick={props.handleDecrement}
             >
               Decrement
-            </button>
+            </button> */}
+
+            {/* -- display count --  */}
+            <p className="card-text">Lines of Code: {props.count}</p>
+
+            </div>
+
           </div>
 
 
