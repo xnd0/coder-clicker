@@ -10,9 +10,8 @@ export default function Counter() {
   const [countF, setCountF] = useState(0);
   const [countAI, setCountAI] = useState(0);
   const [counterAI, setCounterAI] = useState(0);
-  const [fasterAI, setFasterAI] = useState(0);
+  // const [fasterAI, setFasterAI] = useState(0);
   const [countSpeed, setCountSpeed] = useState(1);
-
 
   // console.log(counterAI, "...counterAI is")
   // if (total >= 200) {
@@ -58,7 +57,7 @@ let y = (1000/countSpeed);
   const handleIncrementF = () => {
     
     setCountF(countF + 1);
-    setTotal(total + 10);
+    setTotal(total + 12);
   };
 
   const handleIncrementAI = () => {
@@ -87,13 +86,9 @@ let y = (1000/countSpeed);
     setCountSpeed(countSpeed - 1);
   };
 
-  // if (count > 10) {
-  //   console.log('got 10!')
-  // }
-
   return (
     <div className="App-card text-center">
-      <div className="card-header bg-primary text-white">Coder Clicker!</div>
+      <div className="card-header bg-primary text-red">Coder Clicker</div>
       {/* Here we pass props to CardBody which happen to be the event handlers we created above */}
       <CardBody
         total={total}

@@ -1,6 +1,6 @@
 // import React, { useState } from 'react';
 import React from 'react';
-import ClickerOne from './ClickerOne';
+// import ClickerOne from './old/ClickerOne';
 import Counter from "./Counter";
 
 
@@ -8,26 +8,26 @@ import Counter from "./Counter";
 export default function MainPage() {
     return (
         <div>
+            <div className='App-body'>
+                <br></br>
+            </div>
             {/* <Counter /> */}
-            CLICKER CODER CLICKER CODER CLICKER
             <div className="App">
                 <section className="App-body">
-                    
-
-                    {/* <div className="App-block">
-                        {ClickerOne()}
-                    </div> */}
 
                     <div className="App-block">
                         <Counter />
                     </div>
 
                 </section>
-                <div>
-                    <p>
-                        Welcome to Coder Clicker
-                    </p>
-                    <p> Goal: Get to 10k - How many lines of code can you write?</p>
+                <div className='App-body'>
+                    <br></br>
+                </div>
+                <div className='App-body'>
+                    <p> Goal: 10,000 total lines of code - (click the buttons)</p>
+                </div>
+                <div className='App-body'>
+                    <br></br>
                 </div>
             </div>
         </div>
