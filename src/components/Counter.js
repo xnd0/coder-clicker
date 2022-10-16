@@ -57,7 +57,7 @@ let y = (1000/countSpeed);
   const handleIncrementF = () => {
     
     setCountF(countF + 1);
-    setTotal(total + 10);
+    setTotal(total + 12);
   };
 
   const handleIncrementAI = () => {

@@ -8,7 +8,7 @@ export default function Header() {
         <div>
 
             <div className="header">
-                Header component - coder-clicker - Header component
+                coder-clicker - Header component
             </div>
 
         </div>

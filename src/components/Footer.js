@@ -8,7 +8,7 @@ export default function Footer() {
         <div>
 
             <div className="footer">
-                Footer component - coder-clicker - Footer component
+                coder-clicker - Footer component
             </div>
 
         </div>

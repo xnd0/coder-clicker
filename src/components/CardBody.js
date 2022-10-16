@@ -46,7 +46,7 @@ function CardBody(props) {
                 </button> */}
 
                 {/* -- display count --  */}
-                <p className="card-text">Lines of Code (+1): {props.count}</p>
+                <p className="card-text">Lines of Code: {props.count}</p>
               </div>
             </div>
 
@@ -74,7 +74,7 @@ function CardBody(props) {
                   >
                     "Hand Write" Function
                   </button>{' '}
-                  <p className="card-text">Functions (+10): {props.countF}</p>
+                  <p className="card-text">Functions: {props.countF}</p>
                   {/* <button
                   type="button"
                   className="btn btn-danger"
@@ -171,8 +171,12 @@ function CardBody(props) {
 
         {/* -v-v-v- ScoreCard Info Area -v-v-v- */}
         <div className='center App-block'>
+        <div style={{ display: props.total >= 0 ? "flex" : "none" }}>
+              <p style={{ display: props.total >= 1000 ? "none" : "flex" }}> 
+              ← Click the Button(s)</p>
+            </div>
           <p className="card-text">Total Lines of Code: {props.total}  </p>
-          <br></br>
+          {/* <br></br> */}
 
           {/* linear progress bar  */}
           {/* <div className='l-bar'>
@@ -182,8 +186,14 @@ function CardBody(props) {
           <div className="center flex-column">
 
             {/* -- Progression Messages --  */}
+
+            <div style={{ display: props.total >= 144 ? "flex" : "none" }}>
+              <p style={{ display: props.total >= 1000 ? "none" : "flex" }}> 
+              Making Progress...</p>
+            </div>
+
             <div style={{ display: props.total >= 1000 ? "flex" : "none" }}>
-              <p style={{ display: props.total >= 5000 ? "none" : "flex" }}> Wow! 1,000+ lines of code </p>
+              <p style={{ display: props.total >= 5000 ? "none" : "flex" }}> Wow! 1,000+ lines of code, I think you've got this. </p>
             </div>
 
             <div style={{ display: props.total >= 5000 ? "flex" : "none" }}>
