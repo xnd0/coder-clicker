@@ -32,7 +32,7 @@ function CardBody(props) {
               <div>
                 <button
                   type="button"
-                  className="btn btn-primary"
+                  className="btn btn-primary pulse"
                   onClick={props.handleIncrement}
                 >
                   "Hand Write" Line of Code
