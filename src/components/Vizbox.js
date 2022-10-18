@@ -18,15 +18,15 @@ export default function Vizbox(props) {
     // const numbers = props.total;
     const listItems = array.map((number) =>
         <li key={number}>
-            {array}-code-{number}
+            {array}-code-i:{number}-{props.total}-ref#-{array}-{number}
         </li>
     );
 
 
     return (
-        <div className="vizbox">
+        <div>
 
-            <div>
+            <div className="left">
                 <p>Vizbox Component</p>
                 {/* <p className="card-text">Vizbox Display: {props.total}  </p> */}
                 <p>"i" display : {React.createElement('div', { props }, i)}</p>
