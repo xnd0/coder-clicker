@@ -13,6 +13,10 @@ p {
   margin: 0px 6px;
 }
 
+ul, li {
+  font-size: xx-small;
+}
+
 .App {
   text-align: center;
 }
@@ -30,8 +34,11 @@ p {
 
 .vizbox {
   background-color: rgb(86, 77, 77);
-  width: 50%
-  
+  /* width: 50%; */
+  color:rgb(230, 247, 230);
+  justify-content: flex-start;
+  align-items: flex-start;
+  max-width: 600px;
 }
 
 .App-body {

@@ -13,6 +13,7 @@ export default function Counter() {
   const [counterAI, setCounterAI] = useState(0);
   // const [fasterAI, setFasterAI] = useState(0);
   const [countSpeed, setCountSpeed] = useState(1);
+  // const [viz, setViz] = useState(total)
 
   // console.log(counterAI, "...counterAI is")
   // if (total >= 200) {
@@ -57,7 +58,6 @@ export default function Counter() {
   };
 
   const handleIncrementF = () => {
-
     setCountF(countF + 1);
     setTotal(total + 12);
   };
@@ -88,32 +88,49 @@ export default function Counter() {
     setCountSpeed(countSpeed - 1);
   };
 
+  // const handleViz = () => {
+  //   setViz(console.log('testViz'))
+  // }
+
+  
   return (
     <div className="App-card text-center">
-      <div className="card-header bg-primary text-red">Coder Clicker</div>
-      
-      {/* pass props to CardBody which are the event handlers above */}
-      <CardBody
-        total={total}
-        count={count}
-        countF={countF}
-        countAI={countAI}
-        countSpeed={countSpeed}
-        handleIncrement={handleIncrement}
-        handleDecrement={handleDecrement}
-        handleIncrementF={handleIncrementF}
-        handleIncrementAI={handleIncrementAI}
-        handleDecrementAI={handleDecrementAI}
-        handleFasterAI={handleFasterAI}
-        handleSlowerAI={handleSlowerAI}
-      />
+      <div>Coder Clicker</div>
 
-      {/* pass props to Vizbox  */}
-      <Vizbox
-        total={total}
+      <div>
+
+        <div>
+          {/* pass props to CardBody which are the event handlers above */}
+          <CardBody
+            total={total}
+            count={count}
+            countF={countF}
+            countAI={countAI}
+            countSpeed={countSpeed}
+            handleIncrement={handleIncrement}
+            handleDecrement={handleDecrement}
+            handleIncrementF={handleIncrementF}
+            handleIncrementAI={handleIncrementAI}
+            handleDecrementAI={handleDecrementAI}
+            handleFasterAI={handleFasterAI}
+            handleSlowerAI={handleSlowerAI}
+          />
+        </div>
 
 
-      />
+        {/* -- VizBox Container Div -- */}
+        <div>
+          {/* pass props to Vizbox  */}
+          <div className='vizbox'>
+            <Vizbox
+              total={total}
+            // viz={handleViz}
+            />
+          </div>
+        </div>
+
+
+      </div>
     </div>
   );
 }

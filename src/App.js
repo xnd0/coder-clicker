@@ -9,9 +9,9 @@ function App() {
     return (
         <div>
             <Header />
-            <div className="flex-row">
+            <div>
                 <MainPage />
-                <Vizbox />
+                {/* <Vizbox /> */}
             </div>
             <Footer />
         </div>
