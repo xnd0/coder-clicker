@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import CardBody from './CardBody';
+import Vizbox from './Vizbox';
 
 
 export default function Counter() {
@@ -19,7 +20,7 @@ export default function Counter() {
   //   setTotal(total - 199)
   // }
 
-let y = (1000/countSpeed);
+  let y = (1000 / countSpeed);
 
 
   useEffect(() => {
@@ -28,20 +29,21 @@ let y = (1000/countSpeed);
       return;
     } else {
 
-    const interval = setInterval(() => {
-      // let counterAI = countAI
-      let x = 11
-      setTotal(total + x);
+      const interval = setInterval(() => {
+        // let counterAI = countAI
+        let x = 11
+        setTotal(total + x);
 
-      setCounterAI(counterAI + 1);
-      console.log(counterAI, 'This is Called');
+        setCounterAI(counterAI + 1);
+        console.log(counterAI, 'This is Called');
 
-      // 4 ms
-      // let y = 4
-    }, y);
+        // 4 ms
+        // let y = 4
+      }, y);
 
-    return () => clearInterval(interval);
-  }}, [counterAI]);
+      return () => clearInterval(interval);
+    }
+  }, [counterAI]);
 
 
   // Helper function to handle when the user clicks increment
@@ -55,7 +57,7 @@ let y = (1000/countSpeed);
   };
 
   const handleIncrementF = () => {
-    
+
     setCountF(countF + 1);
     setTotal(total + 12);
   };
@@ -89,7 +91,8 @@ let y = (1000/countSpeed);
   return (
     <div className="App-card text-center">
       <div className="card-header bg-primary text-red">Coder Clicker</div>
-      {/* Here we pass props to CardBody which happen to be the event handlers we created above */}
+      
+      {/* pass props to CardBody which are the event handlers above */}
       <CardBody
         total={total}
         count={count}
@@ -103,6 +106,13 @@ let y = (1000/countSpeed);
         handleDecrementAI={handleDecrementAI}
         handleFasterAI={handleFasterAI}
         handleSlowerAI={handleSlowerAI}
+      />
+
+      {/* pass props to Vizbox  */}
+      <Vizbox
+        total={total}
+
+
       />
     </div>
   );
