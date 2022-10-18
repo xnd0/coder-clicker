@@ -23,6 +23,12 @@ p {
   }
 }
 
+.vizbox {
+  background-color: rgb(86, 77, 77);
+  width: 50%
+  
+}
+
 .App-header {
   background-color: #282c34;
   /* min-height: 100vh; */
