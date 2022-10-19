@@ -32,14 +32,12 @@ export default function Counter() {
 
       const interval = setInterval(() => {
         // let counterAI = countAI
-        let x = 11
-        setTotal(total + x);
+        // let x = 1
+        setTotal(total + 1);
 
         setCounterAI(counterAI + 1);
-        console.log(counterAI, 'This is Called');
-
-        // 4 ms
-        // let y = 4
+        // console.log(counterAI, 'This is Called');
+        
       }, y);
 
       return () => clearInterval(interval);
@@ -51,15 +49,14 @@ export default function Counter() {
   const handleIncrement = () => {
     setCount(count + 1);
     setTotal(total + 1);
-
-    if (count > 10) {
-      console.log('got 10!')
-    }
+    // if (count > 10) {
+    //   console.log('got 10!')
+    // }
   };
 
   const handleIncrementF = () => {
     setCountF(countF + 1);
-    setTotal(total + 12);
+    setTotal(total + 1);
   };
 
   const handleIncrementAI = () => {
@@ -67,7 +64,7 @@ export default function Counter() {
       return;
     }
     setCountAI(countAI + 1);
-    console.log(counterAI, 'in function')
+    // console.log(counterAI, 'in function')
     setCounterAI(counterAI + 1)
   };
 
@@ -86,6 +83,7 @@ export default function Counter() {
 
   const handleSlowerAI = () => {
     setCountSpeed(countSpeed - 1);
+    return;
   };
 
   // const handleViz = () => {

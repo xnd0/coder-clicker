@@ -6,33 +6,32 @@ let array = []
 
 export default function Vizbox(props) {
 
-    // const line1 = <h6>line 1 Lorem ipsum dolor {props.total}</h6>
-    // const line2 = <h6>line 2 arhhr ertw tjyj {props.total}</h6>
-
-    let i = props.total
+    // let i = props.total
 
     array.push(props.total)
+
+    // if (array.length > 10) {
+    //     array.shift()
+    // }
 
     console.log("array is: ", array)
     
     // const numbers = props.total;
-    const listItems = array.map((number) =>
-        <li key={number}>
-            {array}-code-i:{number}-{props.total}-ref#-{array}-{number}
+    const listItems = array.map((x) =>
+        <li>
+            {array}:id-code-i:{x}-ref#:{array}-{x}
         </li>
     );
 
-
+    
     return (
         <div>
 
             <div className="left">
-                <p>Vizbox Component</p>
-                {/* <p className="card-text">Vizbox Display: {props.total}  </p> */}
-                <p>"i" display : {React.createElement('div', { props }, i)}</p>
-                <ul>
+                <h4>Code Visualizer</h4>
+                <p className="card-text">Lines of Code: {listItems.length}  </p>
+                {/* <p>"i" display : {React.createElement('div', { props }, i)}</p> */}
                     <ul>{listItems}</ul>
-                </ul>
             </div>
 
         </div>

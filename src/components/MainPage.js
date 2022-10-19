@@ -24,7 +24,7 @@ export default function MainPage() {
                     <br></br>
                 </div>
                 <div className='App-body'>
-                    <p> Goal: 10,000 total lines of code - (click the buttons)</p>
+                    <p> Goal: 1,000 total lines of code - (click the buttons)</p>
                 </div>
                 <div className='App-body'>
                     <br></br>
