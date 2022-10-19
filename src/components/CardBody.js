@@ -32,7 +32,7 @@ function CardBody(props) {
               <div>
                 <button
                   type="button"
-                  className="btn btn-primary"
+                  className="btn btn-primary pulse"
                   onClick={props.handleIncrement}
                 >
                   "Hand Write" Line of Code
@@ -108,9 +108,9 @@ function CardBody(props) {
                     className="btn btn-primary"
                     onClick={props.handleIncrementAI}
                   >
-                    Initialize Auto Bot
+                    Initialize Auto Clicker
                   </button>{' '}
-                  <p className="card-text">Auto Bot Algorithm: {props.countAI}</p>
+                  <p className="card-text">Auto Clicker Algorithm: {props.countAI}</p>
                   {/* <button
                   type="button"
                   className="btn btn-danger"
@@ -135,7 +135,7 @@ function CardBody(props) {
           <div style={{ display: props.countAI >= 1 ? "flex" : "none" }}>
             <div className="card-body App-card">
 
-              <p className="card-text">Active AutoBot Algorithms: {props.countAI}</p>
+              <p className="card-text">Active AutoClicker Algorithms: {props.countAI}</p>
               <p className="card-text">Speed Upgrades: {props.countSpeed}</p>
 
 <br></br>
@@ -172,10 +172,10 @@ function CardBody(props) {
         {/* -v-v-v- ScoreCard Info Area -v-v-v- */}
         <div className='center App-block'>
         <div style={{ display: props.total >= 0 ? "flex" : "none" }}>
-              <p style={{ display: props.total >= 1000 ? "none" : "flex" }}> 
+              <p style={{ display: props.total >= 140 ? "none" : "flex" }}> 
               ← Click the Button(s)</p>
             </div>
-          <p className="card-text">Total Lines of Code: {props.total}  </p>
+          {/* <p className="card-text">Total Clicks: {props.total}  </p> */}
           {/* <br></br> */}
 
           {/* linear progress bar  */}
@@ -187,22 +187,26 @@ function CardBody(props) {
 
             {/* -- Progression Messages --  */}
 
-            <div style={{ display: props.total >= 144 ? "flex" : "none" }}>
-              <p style={{ display: props.total >= 1000 ? "none" : "flex" }}> 
-              Making Progress...</p>
+            <div style={{ display: props.total >= 14 ? "flex" : "none" }}>
+              <p style={{ display: props.total >= 100 ? "none" : "flex" }}> 
+              You're making progress...</p>
+            </div>
+
+            <div style={{ display: props.total >= 100 ? "flex" : "none" }}>
+              <p style={{ display: props.total >= 500 ? "none" : "flex" }}> Wow! 100+ lines of code</p>
+            </div>
+
+            <div style={{ display: props.total >= 140 ? "flex" : "none" }}>
+              <p style={{ display: props.total >= 550 ? "none" : "flex" }}> I think you've got the hang of this. </p>
+            </div>
+
+            <div style={{ display: props.total >= 500 ? "flex" : "none" }}>
+              <p style={{ display: props.total >= 1000 ? "none" : "flex" }}> 500!? Half way there </p>
             </div>
 
             <div style={{ display: props.total >= 1000 ? "flex" : "none" }}>
-              <p style={{ display: props.total >= 5000 ? "none" : "flex" }}> Wow! 1,000+ lines of code, I think you've got this. </p>
-            </div>
-
-            <div style={{ display: props.total >= 5000 ? "flex" : "none" }}>
-              <p style={{ display: props.total >= 10000 ? "none" : "flex" }}> 5,000!? Half way there </p>
-            </div>
-
-            <div style={{ display: props.total >= 10000 ? "flex" : "none" }}>
               <div className='flex-column'>
-              <p> 10,000+ lines of code. </p>
+              <p> 1,000+ lines of code. </p>
               <p> Slow Down! </p>
               </div>
             </div>

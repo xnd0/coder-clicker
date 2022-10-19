@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import CardBody from './CardBody';
+import Vizbox from './Vizbox';
 
 
 export default function Counter() {
@@ -12,6 +13,7 @@ export default function Counter() {
   const [counterAI, setCounterAI] = useState(0);
   // const [fasterAI, setFasterAI] = useState(0);
   const [countSpeed, setCountSpeed] = useState(1);
+  // const [viz, setViz] = useState(total)
 
   // console.log(counterAI, "...counterAI is")
   // if (total >= 200) {
@@ -19,7 +21,7 @@ export default function Counter() {
   //   setTotal(total - 199)
   // }
 
-let y = (1000/countSpeed);
+  let y = (1000 / countSpeed);
 
 
   useEffect(() => {
@@ -28,36 +30,33 @@ let y = (1000/countSpeed);
       return;
     } else {
 
-    const interval = setInterval(() => {
-      // let counterAI = countAI
-      let x = 11
-      setTotal(total + x);
+      const interval = setInterval(() => {
+        // let counterAI = countAI
+        // let x = 1
+        setTotal(total + 1);
 
-      setCounterAI(counterAI + 1);
-      console.log(counterAI, 'This is Called');
+        setCounterAI(counterAI + 1);
+        // console.log(counterAI, 'This is Called');
+        
+      }, y);
 
-      // 4 ms
-      // let y = 4
-    }, y);
-
-    return () => clearInterval(interval);
-  }}, [counterAI]);
+      return () => clearInterval(interval);
+    }
+  }, [counterAI]);
 
 
   // Helper function to handle when the user clicks increment
   const handleIncrement = () => {
     setCount(count + 1);
     setTotal(total + 1);
-
-    if (count > 10) {
-      console.log('got 10!')
-    }
+    // if (count > 10) {
+    //   console.log('got 10!')
+    // }
   };
 
   const handleIncrementF = () => {
-    
     setCountF(countF + 1);
-    setTotal(total + 12);
+    setTotal(total + 1);
   };
 
   const handleIncrementAI = () => {
@@ -65,7 +64,7 @@ let y = (1000/countSpeed);
       return;
     }
     setCountAI(countAI + 1);
-    console.log(counterAI, 'in function')
+    // console.log(counterAI, 'in function')
     setCounterAI(counterAI + 1)
   };
 
@@ -84,26 +83,52 @@ let y = (1000/countSpeed);
 
   const handleSlowerAI = () => {
     setCountSpeed(countSpeed - 1);
+    return;
   };
 
+  // const handleViz = () => {
+  //   setViz(console.log('testViz'))
+  // }
+
+  
   return (
     <div className="App-card text-center">
-      <div className="card-header bg-primary text-red">Coder Clicker</div>
-      {/* Here we pass props to CardBody which happen to be the event handlers we created above */}
-      <CardBody
-        total={total}
-        count={count}
-        countF={countF}
-        countAI={countAI}
-        countSpeed={countSpeed}
-        handleIncrement={handleIncrement}
-        handleDecrement={handleDecrement}
-        handleIncrementF={handleIncrementF}
-        handleIncrementAI={handleIncrementAI}
-        handleDecrementAI={handleDecrementAI}
-        handleFasterAI={handleFasterAI}
-        handleSlowerAI={handleSlowerAI}
-      />
+      <div>Coder Clicker</div>
+
+      <div>
+
+        <div>
+          {/* pass props to CardBody which are the event handlers above */}
+          <CardBody
+            total={total}
+            count={count}
+            countF={countF}
+            countAI={countAI}
+            countSpeed={countSpeed}
+            handleIncrement={handleIncrement}
+            handleDecrement={handleDecrement}
+            handleIncrementF={handleIncrementF}
+            handleIncrementAI={handleIncrementAI}
+            handleDecrementAI={handleDecrementAI}
+            handleFasterAI={handleFasterAI}
+            handleSlowerAI={handleSlowerAI}
+          />
+        </div>
+
+
+        {/* -- VizBox Container Div -- */}
+        <div>
+          {/* pass props to Vizbox  */}
+          <div className='vizbox'>
+            <Vizbox
+              total={total}
+            // viz={handleViz}
+            />
+          </div>
+        </div>
+
+
+      </div>
     </div>
   );
 }

@@ -4,8 +4,19 @@ button {
   margin: 2px 4px;
 }
 
+button:hover {
+  background-color: rgb(219, 255, 220);
+  box-shadow: 0 0 4px 4px rgb(45, 224, 51);
+}
+
 p {
   margin: 0px 6px;
+}
+
+ul, li {
+  font-size: xx-small;
+  list-style-type: decimal;
+  text-align: start;
 }
 
 .App {
@@ -23,15 +34,17 @@ p {
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  /* min-height: 100vh; */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.vizbox {
+  background-color: rgb(86, 77, 77);
+  /* width: 50%; */
+  color:rgb(230, 247, 230);
+  /* justify-content: flex-start;
+  align-items: flex-start; */
+  max-width: 400px;
+  max-height: 300px;
+  overflow-y: scroll;
+  position: relative;
+  bottom: 0;
 }
 
 .App-body {
@@ -65,9 +78,9 @@ p {
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
-  padding: 1.6vh;
-  margin: 1.6vh;
-  border-radius: 1.6%;
+  padding: 1.2vh;
+  margin: 1.2vh;
+  border-radius: 2px;
 }
 
 .App-link {
@@ -91,6 +104,10 @@ p {
   justify-content: center;
 }
 
+.card-text {
+  font-size: smaller
+}
+
 .l-bar {
     width: 60%;
 }
@@ -112,7 +129,9 @@ p {
 }
 
 .left {
+  align-content: flex-start;
   justify-content: flex-start;
+  align-items: flex-start;
 }
 
 /* .hidden-function {
